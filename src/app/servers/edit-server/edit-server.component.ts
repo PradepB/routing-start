@@ -20,8 +20,7 @@ allowEdit=false
   ngOnInit() {
     console.log(this.route.snapshot.queryParams)
     console.log(this.route.snapshot.fragment)
-    this.route.queryParams.subscribe(
-      (queryParamEdit:Params)=>{        
+    this.route.queryParams.subscribe((queryParamEdit:Params)=>{        
         this.allowEdit=queryParamEdit['allowEdit'] === '1' ? true : false
       }
     )
